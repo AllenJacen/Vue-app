@@ -1,10 +1,11 @@
 <template>
-  <div>
-      <common-header>
-        <span slot="title">Movie</span>
+  <div class="commonstyle">
+      <common-header bg="rgb(0,150,136)">
+          <span slot="title">Music</span>
       </common-header>
-      <router-view></router-view>
-      <common-footer></common-footer>
+    <router-view></router-view>
+      <common-footer bg="rgb(0,150,136)">
+      </common-footer>
   </div>
 </template>
 
@@ -21,5 +22,7 @@ export default {
 
 
 <style scoped>
-
+.commonstyle{
+    margin:1rem 0;
+}
 </style>

@@ -1,14 +1,21 @@
 <template>
-<div class='header'>
-    <button class='home'>首页</button>
-    <h2 class='title'>Movie</h2>
+<div class='header' :style="{backgroundColor:bg}">
+    <span class='home' @click="goHome()">首页</span>
+    <h2 class='title'>
+        <slot name="title"></slot>
+    </h2>
 </div>
   
 </template>
 
 <script>
 export default {
-  
+  methods:{
+      goHome(){
+          this.$router.push('/');
+      }
+  },
+  props:['bg']
 }
 </script>
 
@@ -25,9 +32,8 @@ export default {
 .home{
     color: white;
     width: 1rem;
+    margin-left: 0.2rem;
     height: 0.6rem;
-    border: 0;
-    background-color: rgb(33,150,243);
 }
 .title{
     position: absolute;

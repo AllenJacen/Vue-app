@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        height: 4000px;
+        overflow-y: scroll;
+    }
+    </style>
+</head>
+<body>
+    <script>
+      window.onscroll= () => {
+        let cH = document.documentElement.clientHeight;//可视区域的高度
+        let sH =window.pageYOffset  //用于FF
+                || document.documentElement.scrollTop  
+                || document.body.scrollTop  
+                || 0;//被卷去的高
+        let dH =document.documentElement.scrollHeight;//正文的高度
+      console.log(cH);
+      console.log(sH);
+      console.log(dH);}
+        </script>
+</body>
+</html>
